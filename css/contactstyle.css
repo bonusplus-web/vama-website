@@ -1,0 +1,145 @@
+/* =========================================================
+   CONTACT-PAGE  •  VAMA SRL  (contactstyle.css)
+   ─ Shorter form: keeps entire panel within viewport
+   ========================================================= */
+
+/* ---------- 1. Responsive two-column grid --------------- */
+.contact-grid{
+  display:grid;gap:2.5rem;
+  align-items:start;                       /* top-align columns */
+}
+@media(min-width:52rem){                   /* ≈ 832 px */
+  .contact-grid{grid-template-columns:2fr 1fr;}
+}
+
+/* ---------- 2. Enquiry form ----------------------------- */
+.contact-form{
+  background:var(--clr-light);
+  border-radius:var(--radius-card);
+  box-shadow:var(--shadow-soft);
+
+  /* ↓ a little leaner padding */
+  padding:1.75rem 2rem 2rem;
+
+  display:flex;flex-direction:column;
+  gap:1.25rem;
+
+  /* ↓ NEW: make sure the whole form fits on screen —— */
+  max-height:calc(100vh - 6.5rem);         /* header + topbar ≈ 6.5 rem  */
+  overflow:auto;                           /* add scroll if content spills */
+}
+.contact-form__title{font-size:var(--fs-h3);font-weight:600;margin-bottom:.2rem;}
+
+.contact-field{display:flex;flex-direction:column;gap:.45rem;}
+.contact-label{font-weight:500;}
+
+.contact-field input,
+.contact-field textarea{
+  padding:.65rem .9rem;                    /* slightly reduced */
+  border:1px solid var(--clr-grey-300);
+  border-radius:var(--radius);
+  font-size:var(--fs-base);
+  background:var(--clr-light);
+  resize:vertical;
+  transition:border-color var(--transition),box-shadow var(--transition);
+}
+/* min height keeps feel usable but shorter on load         */
+.contact-field textarea{min-height:5rem;}
+
+.contact-field input:focus,
+.contact-field textarea:focus{
+  border-color:var(--clr-primary);
+  box-shadow:0 0 0 3px var(--clr-primary-light);
+  outline:none;
+}
+
+.contact-form__btn{align-self:flex-start;}
+
+/* Honeypot */
+input[name="address"]{display:none!important}
+
+/* Invalid */
+input:invalid,textarea:invalid{border-color:var(--clr-accent);}
+
+/* ---------- 2-B. Category-note helper ------------------- */
+.category__note{
+  margin-top:1.5rem;                       /* tighter spacing   */
+  font-size:var(--fs-sm);
+  border-left:3px solid var(--clr-primary);
+  padding-left:.75rem;opacity:.85;
+}
+.category__note .link{text-decoration:underline;}
+
+/* ---------- 3. Offices panel ---------------------------- */
+.contact-info{
+  background:var(--clr-light);
+  border-radius:var(--radius-card);
+  box-shadow:var(--shadow-soft);
+  padding:1.9rem 2rem;
+}
+.contact-info__title{
+  font-size:var(--fs-h3);font-weight:600;
+  margin-bottom:1.15rem;text-align:center;
+}
+
+.contact-block:not(:last-child){
+  margin-bottom:1.9rem;padding-bottom:1.6rem;
+  border-bottom:1px solid var(--clr-grey-200);
+}
+.contact-block__title{
+  font-weight:600;margin-bottom:.55rem;
+  color:var(--clr-primary);
+  display:flex;align-items:center;gap:.4rem;
+}
+
+.contact-block__body p{
+  display:flex;align-items:flex-start;
+  gap:.45rem;margin:.25rem 0;
+}
+.contact-block__body .icon{
+  flex:0 0 1.1rem;height:1.1rem;
+}
+
+/* Map link */
+.contact-map{
+  display:inline-block;margin-top:.7rem;
+  font-size:var(--fs-sm);font-weight:500;
+  color:var(--clr-primary);
+  transition:color var(--transition);
+}
+.contact-map:is(:hover,:focus-visible){color:var(--clr-primary-light);}
+
+/* Mobile stack order */
+@media(max-width:51.99rem){
+  .contact-info{order:-1;margin-bottom:2.2rem;}
+}
+
+/* ---------- 4. Map embed -------------------------------- */
+.map-embed iframe{
+  width:100%;height:360px;border:0;display:block;
+  filter:grayscale(100%) contrast(1.1);
+  transition:filter var(--transition);
+}
+.map-embed iframe:hover{filter:none;}
+
+/* ---------- 5. Dark-mode tweak -------------------------- */
+@media(prefers-color-scheme:dark){
+  .contact-form,
+  .contact-field input,
+  .contact-field textarea{
+    background:#0d4741;border-color:#22655c;color:var(--clr-light);
+  }
+}
+
+/* ---------- 6. Reduced-motion --------------------------- */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition:none!important;}
+  .map-embed iframe{filter:none;}
+}
+
+/* ---------- 7. Misc helpers ----------------------------- */
+.logo__mark {
+  width: 10rem;       /* roughly the old 1.7 rem font-size */
+  height: auto;
+  display: inline-block;
+}

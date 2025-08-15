@@ -1,0 +1,211 @@
+/* =========================================================
+   About-page components
+   ========================================================= */
+
+/* ---------- 1. Timeline --------------------------------- */
+
+.timeline {
+  position: relative;
+  margin-left: 1.75rem;          /* room for vertical line */
+  padding-left: 0.75rem;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  left: 0;
+  width: 2px;
+  background: var(--clr-primary-light);
+}
+.timeline__item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+.timeline__year {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  color: var(--clr-primary);
+  margin-bottom: 0.25rem;
+}
+.timeline__title {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.timeline__content {
+  background: var(--clr-light);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-soft);
+  padding: 1rem 1.25rem;
+}
+.timeline__item::before {
+  content: "";
+  position: absolute;
+  left: -1.22rem;               /* centres dot on line */
+  top: 0.45rem;
+  width: 0.7rem; height: 0.7rem;
+  background: var(--clr-primary);
+  border: 2px solid var(--clr-light);
+  border-radius: 50%;
+}
+@media (min-width: 48rem) {
+  .timeline { margin-left: 2.25rem; }
+}
+
+.hero__title {
+  font-size: 50px; 
+  color: var(--clr-primary);             /* large title for hero section */
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero__subtitle {
+  font-size: var(--fs-lg);
+  color: black
+}
+
+/* ---------- 2. Team-cards --------------------------------*/
+.card__img {
+  width: 100%;
+  height: 230px;                /* steady aspect on desktop */
+  object-fit: cover;
+  border-radius: var(--radius-card) var(--radius-card) 0 0;
+  margin-bottom: 1rem;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .card__img { transition: transform 0.3s ease; }
+  .card:hover .card__img { transform: scale(1.03); }
+}
+
+/* ---------- 3. Partners strip --------------------------- */
+.partners {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem 3rem;
+  align-items: center;
+}
+.partners__logo {
+  height: 60px;
+  max-width: 160px;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+.partners__logo:hover,
+.partners__logo:focus-visible {
+  filter: none;
+  opacity: 1;
+}
+
+/* ---------- Scrollable timeline panel ---------- */
+.timeline--scroll {
+  max-height: 28rem;      /* ~450 px on desktop; tweak as you like */
+  overflow-y: auto;
+  padding-right: .5rem;   /* room for scrollbar */
+  scroll-behavior: smooth;
+}
+
+/* Pretty scrollbar (WebKit) */
+.timeline--scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.timeline--scroll::-webkit-scrollbar-thumb {
+  background: var(--clr-primary-light);
+  border-radius: 3px;
+}
+
+/* Optional: fade-in effect reused from reveal JS */
+.timeline__item { opacity: 0; transform: translateY(20px); transition: .6s ease; }
+.timeline__item.is-visible { opacity: 1; transform: none; }
+
+/* =========================================================
+   Reduced-motion fallbacks
+   ========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  .card:hover .card__img { transform: none !important; }
+}
+
+/* =========================================================
+   4. “How we build a pump” – accordion built with <details>
+   ========================================================= */
+
+/* reset default triangles & spacing */
+details.accordion { 
+  border: 1px solid var(--clr-grey-300);
+  border-radius: var(--radius-card);
+  margin-bottom: 1rem;
+  overflow: hidden;                      /* hide body when closed */
+}
+
+/* clickable row */
+details.accordion > summary.accordion__head {
+  list-style: none;                      /* remove default arrow */
+  cursor: pointer;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  position: relative;
+}
+
+details.accordion > summary.accordion__head::after {      /* custom chevron */
+  content: "";
+  width: .65rem; height: .65rem;
+  border: 2px solid currentColor;
+  border-left: 0; border-top: 0;
+  transform: rotate(45deg);              
+  transition: transform .25s ease;
+}
+
+/* body copy */
+details.accordion  .accordion__body {
+  background: var(--clr-grey-100);
+  padding: 0 1.25rem 1.25rem;
+  line-height: 1.6;
+}
+
+/* open state */
+details[open].accordion > summary.accordion__head::after {
+  transform: rotate(135deg);             /* chevron flips down */
+}
+
+/* smooth open/close (when motion is allowed) */
+@media (prefers-reduced-motion: no-preference) {
+  details.accordion[open] .accordion__body {
+    animation: accordion-fade .35s ease;
+  }
+  @keyframes accordion-fade {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: none; }
+  }
+}
+
+/* =========================================================
+   5. Certifications & Memberships (uses .partners grid)
+   ========================================================= */
+
+/* Bump size a bit larger than partner logos */
+#certifications .partners__logo {
+  height: 70px;
+  max-width: 190px;
+}
+
+/* Make cert logos full-colour on hover/focus */
+#certifications .partners__logo:hover,
+#certifications .partners__logo:focus-visible {
+  filter: none;
+  opacity: 1;
+}
+
+/* =========================================================
+   6. Give FAQ & Certifications the grey “alt” backdrop
+   ========================================================= */
+
+#build-faq,
+#certifications {
+  background: var(--clr-grey-100);   /* identical to .section--alt */
+}
+

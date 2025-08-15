@@ -1,0 +1,258 @@
+/* ======================================================================
+   VAMA SRL  –  GALLERY PAGE  (gallerystyle.css) • Rev 7  (2025-08-05)
+   ----------------------------------------------------------------------
+   ✔  Country sections still stack vertically (one after another).
+   ✔  Inside each section, *projects* stack vertically.
+   ✔  Inside each project, image (left) ⟷ description (right) side-by-side.
+   ✔  All copy forced to dark text, transparent card background.
+   ✔  Separator line between countries now 5 px & darker for extra contrast.
+   ====================================================================== */
+
+
+/* ------------------------------------------------------------------
+   0.  Country-section separator – thicker & darker
+   ------------------------------------------------------------------*/
+.category{
+  background:var(--clr-grey-100);
+  position:relative;
+}
+.category:not(:first-of-type)::before{
+  content:"";
+  position:absolute;left:50%;top:-2.25rem;
+  width:92%;max-width:65rem;
+  border-top:5px solid var(--clr-grey-300);     /* ☆ bolder line */
+  transform:translateX(-50%);
+}
+/* zig-zag helper kept for other layouts */
+.category--alt .category__image{order:-1;}
+@media(max-width:47.99rem){.category--alt .category__image{order:0;}}
+
+
+/* ------------------------------------------------------------------
+   1.  Project list inside each country
+   ------------------------------------------------------------------*/
+.gallery-cards{
+  display:flex;
+  flex-direction:column;          /* stack projects */
+  gap:3rem;
+}
+
+
+/* ------------------------------------------------------------------
+   2.  Project card  → image ❐ + description ▬ side-by-side
+   ------------------------------------------------------------------*/
+.gallery-card{
+  display:flex;                   /* side-by-side children   */
+  flex-direction:row;
+  align-items:stretch;
+  gap:2rem;
+  background:transparent;         /* transparent as asked    */
+  box-shadow:none;                /* no card shadow          */
+}
+
+/* 2-a  Slider / image block  ──────────────────────────────── */
+.gallery-card__slider{
+  flex:1 1 46%;                   /* approx half the row     */
+  min-width:17rem;                /* prevents collapse small */
+  position:relative; aspect-ratio:16/9;
+  border-radius:var(--radius-card);
+  overflow:hidden;
+  background:#000;
+  box-shadow:var(--shadow-soft);
+}
+
+.gallery-card__viewport{width:100%;height:100%;position:relative;overflow:hidden;}
+.gallery-card__viewport img{
+  position:absolute;inset:0;
+  width:100%;height:100%;object-fit:cover;
+  opacity:0;transition:opacity .4s ease;
+}
+.gallery-card__viewport .is-active{opacity:1;}
+
+/* Carousel buttons (unchanged aside from bigger target) */
+.carousel__btn{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:2.4rem;height:2.4rem;border-radius:50%;
+  display:grid;place-items:center;
+  background:rgba(0,0,0,.6);color:#fff;z-index:2;
+  transition:background .3s ease,transform .3s ease;
+}
+.carousel__btn:hover{background:rgba(0,0,0,.85);transform:translateY(-50%) scale(1.08);}
+.carousel__btn .icon{width:1.2rem;height:1.2rem;pointer-events:none;}
+.carousel__btn--prev{left:.6rem;transform:translateY(-50%) rotate(180deg);}
+.carousel__btn--next{right:.6rem;}
+
+/* 2-b  Description block  ─────────────────────────────────── */
+.gallery-card__content{
+  flex:1 1 54%;
+  display:flex;flex-direction:column;gap:1.1rem;
+  justify-content:center;
+  max-inline-size:40ch;
+  color:var(--clr-dark);          /* ✦ keep text black       */
+}
+.gallery-card__title{
+  font-size:var(--fs-h3);font-weight:600;color:var(--clr-dark);
+}
+.gallery-card__excerpt{
+  font-size:var(--fs-base);line-height:1.66;color:var(--clr-dark);
+}
+.gallery-card__btn{align-self:flex-start;margin-top:.25rem;}
+
+/* ------------------------------------------------------------------
+   3.  Mobile fallback – stack image + text when too narrow
+   ------------------------------------------------------------------*/
+@media(max-width:44rem){
+  .gallery-card{flex-direction:column;}
+  .gallery-card__slider,
+  .gallery-card__content{flex:1 1 auto;}
+}
+
+/* ------------------------------------------------------------------
+   4.  Sticky tabs (unchanged)
+   ------------------------------------------------------------------*/
+/* =============================================================
+   Enhanced Sticky Country Tabs – Deluxe Styling for VAMA
+   ============================================================= */
+.product-tabs {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(90deg, var(--clr-grey-100), var(--clr-light));
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.06);
+  border-bottom: 3px solid var(--clr-grey-300);
+  backdrop-filter: blur(6px);
+}
+
+.product-tabs__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem 0;
+}
+
+.product-tab {
+  padding: 0.7rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--clr-dark);
+  background: var(--clr-grey-100);
+  border-radius: 99px;
+  border: 2px solid transparent;
+  transition: all 0.35s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
+  transform: translateY(0);
+}
+
+.product-tab:hover,
+.product-tab:focus-visible {
+  background: var(--clr-primary-light);
+  color: var(--clr-light);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.product-tab.is-active {
+  background: var(--clr-primary);
+  color: var(--clr-light);
+  font-weight: 600;
+  border-color: var(--clr-primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive tweaks */
+@media (max-width: 42rem) {
+  .product-tab {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+  }
+}
+
+
+
+/* ------------------------------------------------------------------
+   5.  Dark-mode tweaks  (text still dark as requested)
+   ------------------------------------------------------------------*/
+@media(prefers-color-scheme:dark){
+  .gallery-card__viewport img{filter:brightness(.9);}
+  .carousel__btn{background:rgba(255,255,255,.25);}
+  .carousel__btn:hover{background:rgba(255,255,255,.4);}
+  /* Keeping description area dark-text on light background for readability */
+}
+
+/* ------------------------------------------------------------------
+   6.  Reduced-motion
+   ------------------------------------------------------------------*/
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition:none!important;}
+}
+
+/* ------------------------------------------------------------------
+   7.  Testimonials + Certificate Section (PDF previews)
+   ------------------------------------------------------------------*/
+.testimonial-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.testimonial-card {
+  flex: 1 1 28rem;
+  display: flex;
+  align-items: flex-start;
+  background: var(--clr-white);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-soft);
+  padding: 1.75rem 2rem;
+  gap: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.testimonial-card__icon img {
+  width: 3rem;
+  height: auto;
+}
+
+.testimonial-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  color: var(--clr-dark);
+}
+
+.testimonial-card__title {
+  font-size: var(--fs-h4);
+  font-weight: 600;
+  margin: 0;
+  color: var(--clr-primary-600);
+}
+
+.testimonial-card p {
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.testimonial-card .btn {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  padding: 0.5rem 1.1rem;
+}
+
+@media (max-width: 42rem) {
+  .testimonial-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-card {
+    flex: 1 1 100%;
+  }
+}

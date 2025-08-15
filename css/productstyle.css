@@ -1,0 +1,259 @@
+/* ======================================================================
+   VAMA SRL  –  PRODUCT PAGE  (productstyle.css)
+   Updated: 2025-08-07 – Brochure side-by-side layout
+   ====================================================================== */
+
+/* ------------------------------------------------------------------
+   Global tokens reused (declared in global CSS)
+   ------------------------------------------------------------------ */
+/* --clr-grey-100  #f7f8f9  |  --clr-grey-300  #d2d5dc  (light mid-grey) */
+
+/* ======================================================================
+   0. Background helper
+   ====================================================================== */
+.category { background: var(--clr-grey-100); }
+
+/* === NEW: section separator ========================================= */
+.category + .category {
+  position: relative;
+}
+.category + .category::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(90%, var(--container-max));
+  height: 1px;
+  background: var(--clr-grey-300);
+}
+
+/* ======================================================================
+   1. CATEGORY LAYOUT
+   ====================================================================== */
+.category__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+@media (min-width: 48rem) {
+  .category__inner {
+    flex-direction: row;
+    gap: 3.5rem;
+  }
+}
+
+/* Zig-zag layout */
+.category--alt .category__image {
+  order: -1;
+}
+@media (max-width: 47.99rem) {
+  .category--alt .category__image {
+    order: 0;
+  }
+}
+
+/* ======================================================================
+   2. IMAGERY
+   ====================================================================== */
+.category__image {
+  flex: 1 1 20rem;
+  max-width: 70rem;
+}
+.image-and-brochure {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: nowrap;
+}
+
+.ib__img {
+  flex: 1 1 100%;           /* Increased from 60% */
+  min-width: 0;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-soft);
+  object-fit: cover;
+}
+
+.ib__brochure {
+  flex: 1 1 40%;           /* Increased from 35% */
+  min-width: 0;
+  max-width: 240px;        /* Slightly increased */
+  margin-top: 0;
+}
+
+@media (max-width: 35rem) {
+  .image-and-brochure {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .ib__img,
+  .ib__brochure {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+
+/* ======================================================================
+   3. TEXT BLOCK
+   ====================================================================== */
+.category__content {
+  flex: 2 1 30rem;
+  max-inline-size: 55ch;
+}
+.category__list {
+  margin: 1.5rem 0 0;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+.category__list li {
+  margin-block: .35rem;
+}
+.category__note {
+  margin-top: 1.75rem;
+  font-size: var(--fs-sm);
+  border-left: 3px solid var(--clr-primary);
+  padding-left: .75rem;
+  opacity: .85;
+}
+.category__note .link {
+  text-decoration: underline;
+}
+
+/* ======================================================================
+   4. BADGES
+   ====================================================================== */
+.badge {
+  display: inline-block;
+  padding: .2rem .6rem;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  border-radius: var(--radius);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-bottom: .75rem;
+}
+.badge--own { background: var(--clr-primary); color: var(--clr-light); }
+.badge--supplier { background: var(--clr-grey-200); color: var(--clr-dark); }
+
+/* ======================================================================
+   5. SUPPLIER LOGO STRIP
+   ====================================================================== */
+.suppliers {
+  margin-top: 2rem;
+}
+.suppliers__title {
+  font-size: var(--fs-base);
+  font-weight: 600;
+  margin-bottom: .75rem;
+}
+.suppliers__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.supplier-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--clr-light);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .06);
+  transition: transform .3s ease;
+}
+.supplier-logo:hover {
+  transform: translateY(-3px);
+}
+
+/* ======================================================================
+   6. PRODUCT-TABS BAR
+   ====================================================================== */
+.product-tabs {
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  background: var(--clr-light);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .04);
+}
+.product-tabs__inner {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  padding-block: .6rem;
+}
+.product-tab {
+  color: var(--clr-dark);
+  padding: .5rem 1rem;
+  font-weight: 500;
+  border-radius: var(--radius);
+  transition: background .3s ease, color .3s ease;
+}
+.product-tab:is(:hover, :focus-visible) {
+  background: var(--clr-grey-200);
+}
+.product-tab.is-active {
+  background: var(--clr-primary);
+  color: var(--clr-light);
+}
+
+/* ======================================================================
+   7. HERO fine-tune
+   ====================================================================== */
+.hero__title {
+  letter-spacing: -.5px;
+}
+.hero__subtitle {
+  max-inline-size: 55ch;
+}
+
+/* ======================================================================
+   Brochure block (submersible section)
+   ====================================================================== */
+.brochure {
+  max-width: 210px;
+  width: 100%;
+}
+.brochure__cover {
+  width: 100%;
+  aspect-ratio: 210/297;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-soft);
+  object-fit: cover;
+}
+.brochure__downloads {
+  margin-top: .75rem;
+  width: 100%;
+}
+.brochure__btn {
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: .6rem 1rem;
+}
+.brochure__list {
+  list-style: none;
+  margin: 0;
+  padding: .75rem 1rem;
+  background: var(--clr-grey-100);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.brochure__list a {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+.brochure__list span {
+  opacity: .7;
+  font-size: var(--fs-sm);
+}
+

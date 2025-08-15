@@ -1,0 +1,76 @@
+/* =========================================================
+   Pump Selector Page — Local Styles
+   (keeps global CSS intact; only augments this page)
+   ========================================================= */
+
+/* Light hero variant that fits your global design */
+.hero--lite {
+  background-color: var(--clr-grey-100);
+  color: var(--clr-dark);
+  padding-block: 4rem;
+}
+.hero--lite .hero__title {
+  color: var(--clr-dark);
+}
+.hero--lite .hero__subtitle {
+  max-inline-size: 60ch;
+  margin-inline: auto;
+}
+
+/* Benefits cards: subtle elevation on hover */
+#selector-benefits .card--feature {
+  background: var(--clr-light);
+  border: 1px solid var(--clr-grey-200);
+  border-radius: var(--radius-card);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+#selector-benefits .card--feature:hover {
+  box-shadow: var(--shadow-soft);
+  transform: translateY(-3px);
+}
+
+/* Steps list spacing */
+.steps { margin: 0; padding-left: 1.25rem; }
+.steps li { margin: .45rem 0; }
+
+/* Checklist ticks (Why VAMA) */
+.checklist { list-style: none; padding-left: 0; }
+.checklist li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: .5rem;
+}
+.checklist li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--clr-primary);
+  font-weight: 700;
+}
+
+/* FAQ section ensures black text on white bg (you asked explicitly) */
+body.selector #faqs {
+  background: #fff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+body.selector #faqs .section__title,
+body.selector #faqs .section__lead,
+body.selector #faqs summary,
+body.selector #faqs p {
+  color: #000;
+}
+body.selector #faqs details {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: var(--radius);
+  padding: .85rem 1rem;
+  margin-bottom: .85rem;
+  transition: background-color var(--transition);
+}
+body.selector #faqs details:hover { background: #f1f1f1; }
+
+/* Minor responsive refinements */
+@media (min-width: 48rem){
+  .hero--lite { padding-block: 5rem; }
+}

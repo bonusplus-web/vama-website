@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO -->
+  <title>Pump Selector | Fast, Accurate Pump Sizing by VAMA SRL</title>
+  <meta name="description" content="Size stainless-steel submersible and multistage pumps in minutes. Use the VAMA Pump Selector to match duty points, compare models, and request access." />
+  <link rel="canonical" href="https://www.vamapumps.com/selector.html" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="VAMA SRL Pump Selector — Fast, Accurate Pump Sizing" />
+  <meta property="og:description" content="Quickly match duty points, compare pump curves, and request access for your team. Built for distributors, EPCs, and utilities." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.vamapumps.com/selector.html" />
+  <meta property="og:image" content="https://www.vamapumps.com/assets/vamatablogo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts (match your global font stack, include once sitewide) -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=DM+Serif+Display:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Global + Local styles -->
+<link rel="stylesheet" href="css/style.css" />          <!-- global -->
+  <link rel="stylesheet" href="css/selector.css" />  <!-- page-specific -->
+
+  <!-- Optional: small helper to set year -->
+  <script>document.addEventListener('DOMContentLoaded',()=>{const y=document.getElementById('year'); if(y){y.textContent=new Date().getFullYear();}});</script>
+
+  <!-- FAQPage JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"What can I size with the Pump Selector?",
+        "acceptedAnswer":{"@type":"Answer","text":"Stainless-steel submersible deep well pumps and vertical multistage booster pumps. Enter duty head and flow to see suitable families and models."}
+      },
+      {
+        "@type":"Question",
+        "name":"Do I need an account?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes. Access is granted by request for partners and project teams. Use the form to request access or contact us for a demo."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I export results?",
+        "acceptedAnswer":{"@type":"Answer","text":"You can export your selection summary and share it with your procurement or engineering team to request a quotation."}
+      },
+      {
+        "@type":"Question",
+        "name":"Is performance testing certified?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes. Pumps are tested in Italy with ISO-certified procedures before shipment."}
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="selector">
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <span class="topbar__item"><svg class="icon"><use href="#icon-phone"></use></svg> HQ Italy: +39 0522 371 159</span>
+      </div>
+      <div class="topbar__right">
+        <span class="topbar__item"><svg class="icon"><use href="#icon-mail"></use></svg> info@vamapumps.it</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="header" id="site-header" data-animate="fade-down">
+    <nav class="container nav">
+      <a class="logo" href="index.html" aria-label="VAMA SRL Home">
+        <img src="assets/vama_logo.png" class="logo__mark" alt="VAMA SRL logo" />
+        <span class="logo__text">VAMA SRL</span>
+      </a>
+      <ul class="nav__links" role="menubar" aria-label="Primary">
+        <li role="none"><a role="menuitem" class="nav__link" href="index.html">Home</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="about.html">About Us</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="products.html">Products</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="gallery.html">Gallery</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="contact.html">Contact</a></li>
+        <li role="none"><a class="nav__mobile-link" href="https://vamapumpselector.com/">pump selector</a></li>
+      </ul>
+      <a class="btn btn--hero nav__cta" href="contact.html">Get Quote</a>
+
+      <button class="nav__toggle" id="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="nav__toggle-bar"></span><span class="nav__toggle-bar"></span><span class="nav__toggle-bar"></span>
+      </button>
+      <div class="nav__mobile" id="mobile-menu" hidden>
+        <a class="nav__mobile-link" href="index.html">Home</a>
+        <a class="nav__mobile-link" href="about.html">About Us</a>
+        <a class="nav__mobile-link" href="products.html">Products</a>
+        <a class="nav__mobile-link" href="gallery.html">Gallery</a>
+        <a class="nav__mobile-link" href="contact.html">Contact</a>
+        <a class="nav__mobile-link" href="https://vamapumpselector.com/">pump selector</a>
+        <a class="btn btn--hero nav__mobile-cta" href="contact.html">Get Quote</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero hero--lite" aria-label="VAMA Pump Selector">
+      <div class="container hero__inner" data-animate="zoom-in">
+        <h1 class="hero__title"><span class="text-gradient">VAMA Pump Selector</span></h1>
+        <p class="hero__subtitle">
+          Size stainless-steel submersible and vertical multistage pumps in minutes.
+          Enter duty head and flow, compare curves, and send a request for quotation.
+          Prefer to browse first? See our <a href="/products.html">pump families</a>.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--hero" href="https://vamapumpselector.com/">
+            <span>Open Pump Selector</span>
+            <svg aria-hidden="true" class="icon icon--arrow"><use href="#icon-arrow-right"></use></svg>
+          </a>
+          <a class="btn btn--outline" href="/contact.html">Request Access</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="section" id="selector-benefits" data-animate="fade-right">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">Why use the <span class="text-gradient">Pump Selector</span>?</h2>
+          <p class="section__lead">Built for distributors, EPCs, water utilities, and industrial plants.</p>
+        </header>
+
+        <div class="grid cards">
+          <article class="card card--feature">
+            <div class="card__icon"><svg class="icon icon--bolt"><use href="#icon-bolt"></use></svg></div>
+            <h3 class="card__title">Fast duty-point matching</h3>
+            <p class="card__text">Input flow and head to instantly shortlist suitable models for deep well and booster applications. Compare against our <a href="/products.html#submersible">stainless-steel submersible pumps</a>.</p>
+          </article>
+
+          <article class="card card--feature">
+            <div class="card__icon"><svg class="icon icon--award"><use href="#icon-award"></use></svg></div>
+            <h3 class="card__title">Engineering-grade data</h3>
+            <p class="card__text">Review curves and technical parameters designed for real projects. When you’re ready, <a href="/contact.html">request a quotation</a>.</p>
+          </article>
+
+          <article class="card card--feature">
+            <div class="card__icon"><svg class="icon icon--tool"><use href="#icon-tool"></use></svg></div>
+            <h3 class="card__title">Spec & share</h3>
+            <p class="card__text">Save your selection summary and share it with your team. Explore related <a href="/products.html#multistage">vertical multistage pumps</a> for boosters.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section section--alt" id="how-it-works" data-animate="fade-left">
+      <div class="container narrow">
+        <header class="section__header">
+          <h2 class="section__title">How it works</h2>
+          <p class="section__lead">Three quick steps to a professional pump shortlist.</p>
+        </header>
+
+        <ol class="steps">
+          <li><strong>Enter duty data:</strong> Flow (m³/h) and head (m). Optionally add water type or constraints.</li>
+          <li><strong>Review matches:</strong> Compare efficiency ranges and typical operating windows.</li>
+          <li><strong>Send RFQ:</strong> Submit your selection to our team or <a href="/contact.html">request access</a> for a full demo.</li>
+        </ol>
+
+        <p>Need a broader view first? Browse our <a href="/products.html">product catalogue</a> or see real-world <a href="/gallery.html">project installations</a>.</p>
+      </div>
+    </section>
+
+    <!-- Trust / Why VAMA -->
+    <section class="section" id="why-vama" data-animate="zoom-in">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">Why VAMA SRL</h2>
+          <p class="section__lead">Italian manufacturing, AISI 304/316 construction, and ISO-certified performance testing.</p>
+        </header>
+
+        <ul class="checklist">
+          <li>Stainless-steel construction for corrosive environments.</li>
+          <li>Deep well and booster solutions for municipal, industrial, and irrigation use.</li>
+          <li>Support from selection to commissioning—<a href="/about.html">learn more about VAMA SRL</a>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" data-animate="zoom-out">
+      <div class="container cta__inner">
+        <h2 class="cta__title">Ready to size your pump?</h2>
+        <p class="cta__text">Use our <a href="https://vamapumpselector.com/">Pump Selector</a> or <a href="/contact.html">request access</a> to get started with your project.</p>
+        <a class="btn btn--dark" href="/contact.html">
+          Request Access
+          <svg aria-hidden="true" class="icon icon--arrow"><use href="#icon-arrow-right"></use></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQs (black text on white bg; inherits global FAQ colors) -->
+    <section class="section section--alt" id="faqs" data-animate="fade-up">
+      <div class="container narrow">
+        <header class="section__header">
+          <h2 class="section__title">Frequently Asked Questions</h2>
+          <p class="section__lead">Everything you need to get started quickly.</p>
+        </header>
+
+        <details>
+          <summary>What can I size with the Pump Selector?</summary>
+          <p>Stainless-steel submersible deep well pumps and vertical multistage booster pumps.</p>
+        </details>
+        <details>
+          <summary>Do I need an account?</summary>
+          <p>Yes, access is granted by request. Please <a href="/contact.html">contact us</a> with your company and project details.</p>
+        </details>
+        <details>
+          <summary>Can I export my selection?</summary>
+          <p>You can save or export a summary to share with your procurement or engineering team.</p>
+        </details>
+        <details>
+          <summary>Is performance testing certified?</summary>
+          <p>Yes. Pumps undergo ISO-certified performance testing in Italy before shipment.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (uses your global footer styles) -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <div class="logo logo--lg">
+          <a class="logo" href="index.html" aria-label="VAMA SRL Home">
+            <img src="assets/vama_logo.png" alt="VAMA SRL logo" class="logo__mark" />
+            <span class="logo__text">VAMA SRL</span>
+          </a>
+        </div>
+        <p class="footer__about">Italian-engineered water pumps designed for performance and reliability.</p>
+        <div class="footer__social" aria-label="Social media">
+          <a class="social" href="#" aria-label="LinkedIn">in</a>
+          <a class="social" href="#" aria-label="Facebook">f</a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__title">Italy</h3>
+        <p class="footer__item"><svg class="icon icon--map-pin"><use href="#icon-map-pin"/></svg> Via G. Di Vittorio, 15 – 42025 Cavriago (RE)</p>
+        <p class="footer__item"><svg class="icon icon--phone"><use href="#icon-phone"/></svg> +39 0522 371 159</p>
+        <p class="footer__item"><svg class="icon icon--mail"><use href="#icon-mail"/></svg> info@vamapumps.it</p>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__title">Quick Links</h3>
+        <p class="footer__item"><a href="/products.html#submersible">Stainless-Steel Submersible Pumps</a></p>
+        <p class="footer__item"><a href="/products.html#multistage">Vertical Multistage Pumps</a></p>
+        <p class="footer__item"><a href="/gallery.html">Projects & Installations</a></p>
+        <p class="footer__item"><a href="/contact.html">Request Access</a></p>
+        <p class="footer__item"><a href="https://vamapumpselector.com/">Open Pump Selector</a></p>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <nav class="footer__links" aria-label="Quick links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="products.html">Products</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+          <a href="https://vamapumpselector.com/">Pump Selector</a>
+        </nav>
+        <p class="footer__copy">© <span id="year"></span> VAMA SRL. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

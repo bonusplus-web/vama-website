@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ——— Meta ——— -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | VAMA SRL — Let’s Talk Water Pumps</title>
+  <meta name="description"
+        content="Get a quotation, request technical support or ask about becoming a distributor of VAMA stainless-steel pumps in Ethiopia." />
+
+  <!-- ——— Fonts & Core Styles ——— -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />          <!-- global -->
+  <link rel="stylesheet" href="css/contactstyle.css" />  <!-- page-specific -->
+
+  <!-- ——— Shared JS ——— -->
+  <script defer src="js/script.js"></script>             <!-- global -->
+  <script defer src="js/contactscript.js"></script>      <!-- form / nav -->
+</head>
+
+<body class="contact">
+  <!-- ✦ SVG SPRITE (shared icons) -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol id="icon-phone" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" fill="none" stroke="currentColor">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3.18 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72
+               12 12 0 0 0 .56 2.4 2 2 0 0 1-.45 2L9 10.91a16 16 0 0 0 6 6l1.79-1.79
+               a2 2 0 0 1 2-.45 12 12 0 0 0 2.4.56A2 2 0 0 1 22 16.92z"/>
+    </symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" fill="none" stroke="currentColor">
+      <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+      <polyline points="3 7 12 13 21 7"></polyline>
+    </symbol>
+    <symbol id="icon-map-pin" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" fill="none" stroke="currentColor">
+      <path d="M21 10c0 6-9 13-9 13S3 16 3 10a9 9 0 1 1 18 0z"></path>
+      <circle cx="12" cy="10" r="3"></circle>
+    </symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" fill="none" stroke="currentColor">
+      <line x1="5" y1="12" x2="19" y2="12"></line>
+      <polyline points="12 5 19 12 12 19"></polyline>
+    </symbol>
+  </svg>
+
+  <!-- ✦ TOP CONTACT STRIP -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <span class="topbar__item">
+          <svg class="icon" aria-hidden="true"><use href="#icon-phone"></use></svg>
+          IT&nbsp;+39&nbsp;0522&nbsp;371&nbsp;159
+        </span>
+        <span class="topbar__item">
+          <svg class="icon" aria-hidden="true"><use href="#icon-phone"></use></svg>
+          ET&nbsp;+251&nbsp;911&nbsp;172&nbsp;108
+        </span>
+      </div>
+      <div class="topbar__right">
+        <span class="topbar__item">
+          <svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg>
+          info@vamapumps.it
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✦ HEADER / NAVIGATION -->
+  <header class="header" id="site-header">
+    <nav class="container nav">
+      <a class="logo" href="index.html" aria-label="VAMA SRL Home">
+        <img src="assets/vama_logo.png" alt="VAMA SRL logo" class="logo__mark" />
+      </a>
+
+      <ul class="nav__links" role="menubar" aria-label="Primary navigation">
+        <li role="none"><a class="nav__link" role="menuitem" href="index.html">Home</a></li>
+        <li role="none"><a class="nav__link" role="menuitem" href="about.html">About&nbsp;Us</a></li>
+        <li role="none"><a class="nav__link" role="menuitem" href="products.html">Products</a></li>
+        <li role="none"><a class="nav__link" role="menuitem" href="gallery.html">Gallery</a></li>
+        <li role="none"><a class="nav__link is-active" role="menuitem" href="contact.html">Contact</a></li>
+        <li role="none"><a class="nav__mobile-link" href="https://vamapumpselector.com/">pump selector</a></li>
+      </ul>
+
+      <a class="btn btn--hero nav__cta" href="#contact-form">Get&nbsp;Quote</a>
+
+      <button class="nav__toggle" id="mobile-menu-toggle" aria-label="Toggle menu"
+              aria-expanded="false" aria-controls="mobile-menu">
+        <span class="nav__toggle-bar"></span><span class="nav__toggle-bar"></span><span class="nav__toggle-bar"></span>
+      </button>
+
+      <div class="nav__mobile" id="mobile-menu" hidden>
+        <a class="nav__mobile-link" href="index.html">Home</a>
+        <a class="nav__mobile-link" href="about.html">About&nbsp;Us</a>
+        <a class="nav__mobile-link" href="products.html">Products</a>
+        <a class="nav__mobile-link" href="gallery.html">Gallery</a>
+        <a class="nav__mobile-link is-active" href="contact.html">Contact</a>
+        <a class="nav__mobile-link" href="https://vamapumpselector.com/">pump selector</a>
+        <a class="btn btn--hero nav__mobile-cta" href="#contact-form">Get&nbsp;Quote</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ✦ FORM + OFFICE DETAILS -->
+  <section class="section">
+    <div class="container contact-grid">
+      <!-- FORM --------------------------------------------------------- -->
+      <form id="contact-form" class="contact-form" action="mailto:info@vamapumps.it"
+            method="post" enctype="text/plain">
+        <h2 class="contact-form__title">Send us a message</h2>
+
+        <!-- Honeypot (spam protection) -->
+        <input type="text" name="address" autocomplete="off" hidden aria-hidden="true">
+
+        <label class="contact-field">
+          <span class="contact-label">Name *</span>
+          <input required type="text" name="name" placeholder="Full name" />
+        </label>
+
+        <label class="contact-field">
+          <span class="contact-label">Email *</span>
+          <input required type="email" name="email" placeholder="name@company.com" />
+        </label>
+
+        <label class="contact-field">
+          <span class="contact-label">Phone</span>
+          <input type="tel" name="phone" placeholder="+251 …" />
+        </label>
+
+        <label class="contact-field">
+          <span class="contact-label">Message *</span>
+          <textarea required name="message" rows="6"
+                    placeholder="Tell us about your project, pump model, flow/head requirements…"></textarea>
+        </label>
+
+        <button class="btn btn--hero contact-form__btn" type="submit">
+          Submit&nbsp;Enquiry
+        </button>
+
+        <p class="category__note" style="margin-top:1rem">
+          We aim to respond within one business day (Monday&nbsp;–&nbsp;Friday, 09:00-17:00 CET).
+        </p>
+      </form>
+
+      <!-- OFFICES ------------------------------------------------------- -->
+      <aside class="contact-info">
+        <h2 class="contact-info__title">Our Offices</h2>
+
+        <!-- Italy -->
+        <div class="contact-block">
+          <h3 class="contact-block__title">
+            <svg class="icon" aria-hidden="true"><use href="#icon-map-pin"></use></svg>
+            Italy&nbsp;(HQ)
+          </h3>
+          <div class="contact-block__body">
+            <p><svg class="icon" aria-hidden="true"><use href="#icon-map-pin"></use></svg>
+               Via G. Di Vittorio 15, 42025 Cavriago (RE)</p>
+            <p><svg class="icon" aria-hidden="true"><use href="#icon-phone"></use></svg>
+               +39 0522 371 159</p>
+            <p><svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg>
+               info@vamapumps.it</p>
+          </div>
+          <a class="contact-map" href="https://maps.app.goo.gl/UHhpqbxrNzB9huMQ6"
+             target="_blank" rel="noopener">Open in Google Maps →</a>
+        </div>
+
+        <!-- Ethiopia -->
+        <div class="contact-block">
+          <h3 class="contact-block__title">
+            <svg class="icon" aria-hidden="true"><use href="#icon-map-pin"></use></svg>
+            Ethiopia
+          </h3>
+          <div class="contact-block__body">
+            <p><svg class="icon" aria-hidden="true"><use href="#icon-map-pin"></use></svg>
+               Addis Ababa</p>
+            <p><svg class="icon" aria-hidden="true"><use href="#icon-phone"></use></svg>
+               +251 911 172 108</p>
+            <p><svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg>
+               ethiopia@vamapumps.com</p>
+          </div>
+          <a class="contact-map" href="https://maps.app.goo.gl/7Y3kDM7UxAr8swRV8"
+             target="_blank" rel="noopener">Open in Google Maps →</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ✦ EMBEDDED MAP -->
+  <section class="map-embed" aria-label="VAMA SRL Italy HQ on Google Maps">
+    <iframe
+      title="VAMA SRL Italy HQ"
+      src="https://maps.google.com/maps?q=Via%20G.%20Di%20Vittorio%2015%2C%2042025%20Cavriago%20RE%2C%20Italy&z=14&output=embed"
+      loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+  <!-- ✦ FOOTER -->
+       <footer class="footer" data-animate="fade-up">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <div class="logo logo--lg">
+        <a class="logo" href="index.html" aria-label="VAMA SRL Home">
+          <img src="assets/vama_logo.png" alt="VAMA SRL logo" class="logo__mark" />
+          <span class="logo__text">VAMA SRL</span>
+        </a>
+      </div>
+      <p class="footer__about">Italian-engineered water pumps designed for performance and reliability in Ethiopia.</p>
+
+      <div class="footer__social" aria-label="Social media">
+        <a class="social" href="#" aria-label="LinkedIn">in</a>
+        <a class="social" href="#" aria-label="Facebook">f</a>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <h3 class="footer__title">Italy</h3>
+      <p class="footer__item"><svg class="icon icon--map-pin"><use href="#icon-map-pin"/></svg> Via G. Di Vittorio, 15 – 42025 Cavriago (RE)</p>
+      <p class="footer__item"><svg class="icon icon--phone"><use href="#icon-phone"/></svg> +39 0522 371 159</p>
+      <p class="footer__item"><svg class="icon icon--mail"><use href="#icon-mail"/></svg> info@vamapumps.it</p>
+    </div>
+
+    <div class="footer__col">
+      <h3 class="footer__title">Quick Links</h3>
+      <p class="footer__item"><a href="about.html">know who we are</a></p>
+      <p class="footer__item"><a href="products.html">Submersible Pumps</a></p>
+      <p class="footer__item"><a href="gallery.html">Our Journey</a></p>
+      <p class="footer__item"><a href="contact.html">Request Access to our Pump Selector</a></p>
+      <p class="footer__item"><a href="https://vamapumpselector.com/">Log in to Our Pump Selector</a></p>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <nav class="footer__links" aria-label="Quick links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://vamapumpselector.com/">Pump Selector</a>
+      </nav>
+      <p class="footer__copy">© <span id="year"></span> VAMA SRL. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ——— Meta ——— -->
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Project Gallery | VAMA SRL — Stainless-Steel Pump Installations Worldwide</title>
+  <meta name="description"
+        content="Explore a curated gallery of VAMA SRL stainless-steel pump projects across Africa, Europe and the Middle East. Filter by country and dive into detailed technical case-studies and real-world impact stories."/>
+
+  <!-- ——— Fonts & core styles ——— -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">          <!-- global -->
+  <link rel="stylesheet" href="css/gallerystyle.css">  <!-- page specific -->
+
+  <!-- ——— Shared JS ——— -->
+  <script defer src="js/script.js"></script>            <!-- global -->
+  <script defer src="js/galleryscript.js"></script>     <!-- sliders / scroll-spy -->
+</head>
+
+<body class="gallery">
+<!-- ╔══════════════════════════════════════════════════════════════╗
+     ║  SVG ICON SPRITE  ·  SHARED ACROSS ALL PAGES                 ║
+     ╚══════════════════════════════════════════════════════════════╝ -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <!-- Phone -->
+  <symbol id="icon-phone" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" fill="none" stroke="currentColor">
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.78 19.78 0 0 1 3.18 5.18
+             2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72 12 12 0 0 0 .56 2.4
+             2 2 0 0 1-.45 2L9 10.91a16 16 0 0 0 6 6l1.79-1.79
+             a2 2 0 0 1 2-.45 12 12 0 0 0 2.4.56A2 2 0 0 1 22 16.92z"/>
+  </symbol>
+
+  <!-- Mail -->
+  <symbol id="icon-mail" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" fill="none" stroke="currentColor">
+    <rect x="3" y="5" width="18" height="14" rx="2" ry="2"/>
+    <polyline points="3 7 12 13 21 7"/>
+  </symbol>
+
+  <!-- Map-pin -->
+  <symbol id="icon-map-pin" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" fill="none" stroke="currentColor">
+    <path d="M21 10c0 6-9 13-9 13S3 16 3 10a9 9 0 1 1 18 0z"/>
+    <circle cx="12" cy="10" r="3"/>
+  </symbol>
+
+  <!-- Arrow right (CSS flips for “prev”) -->
+  <symbol id="icon-arrow-right" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" fill="none" stroke="currentColor">
+    <line x1="5"  y1="12" x2="19" y2="12"/>
+    <polyline points="12 5 19 12 12 19"/>
+  </symbol>
+</svg>
+
+<!-- ✦ Top contact strip -->
+<div class="topbar">
+  <div class="container topbar__inner">
+    <div class="topbar__left">
+      <span class="topbar__item"><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg> IT&nbsp;+39&nbsp;0522&nbsp;371&nbsp;159</span>
+      <span class="topbar__item"><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg> ET&nbsp;+251&nbsp;911&nbsp;172&nbsp;108</span>
+    </div>
+    <div class="topbar__right">
+      <span class="topbar__item"><svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg> info@vamapumps.it</span>
+    </div>
+  </div>
+</div>
+
+<!-- ✦ Header / navigation -->
+<header class="header" id="site-header">
+  <nav class="container nav">
+    <a class="logo" href="index.html" aria-label="VAMA SRL Home">
+      <img src="assets/vama_logo.png" alt="VAMA SRL logo" class="logo__mark">
+    </a>
+
+    <ul class="nav__links" role="menubar" aria-label="Primary navigation">
+      <li role="none"><a class="nav__link" role="menuitem" href="index.html">Home</a></li>
+      <li role="none"><a class="nav__link" role="menuitem" href="about.html">About&nbsp;Us</a></li>
+      <li role="none"><a class="nav__link" role="menuitem" href="products.html">Products</a></li>
+      <li role="none"><a class="nav__link is-active" role="menuitem" href="gallery.html">Gallery</a></li>
+      <li role="none"><a class="nav__link" role="menuitem" href="contact.html">Contact</a></li>
+      <li role="none"><a class="nav__link" role="menuitem" href="https://vamapumpselector.com/">pump selector</a></li>
+    </ul>
+
+    <a class="btn btn--hero nav__cta" href="contact.html">Get&nbsp;Quote</a>
+
+    <!-- Mobile burger -->
+    <button class="nav__toggle" id="mobile-menu-toggle" aria-label="Toggle menu"
+            aria-expanded="false" aria-controls="mobile-menu">
+      <span class="nav__toggle-bar"></span><span class="nav__toggle-bar"></span><span class="nav__toggle-bar"></span>
+    </button>
+
+    <!-- Mobile drawer -->
+    <div class="nav__mobile" id="mobile-menu" hidden>
+      <a class="nav__mobile-link" href="index.html">Home</a>
+      <a class="nav__mobile-link" href="about.html">About&nbsp;Us</a>
+      <a class="nav__mobile-link" href="products.html">Products</a>
+      <a class="nav__mobile-link is-active" href="gallery.html">Gallery</a>
+      <a class="nav__mobile-link" href="contact.html">Contact</a>
+      <a class="nav__mobile-link" href="https://vamapumpselector.com/">pump selector</a>
+      <a class="btn btn--hero nav__mobile-cta" href="contact.html">Get&nbsp;Quote</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- ✦ Hero -->
+  <section class="hero" aria-label="Project gallery hero">
+    <div class="hero__bg" style="--hero-image:url('assets/gallery/gallery-hero.jpg')"></div>
+    <div class="container hero__inner">
+      <h1 class="hero__title">Project&nbsp;Gallery</h1>
+      <p class="hero__subtitle">
+        Real installations, proven performance. Browse by country, explore in-depth technical data and see how VAMA stainless-steel pumps sustain life and industry worldwide.
+      </p>
+      <div class="hero__scroll" aria-hidden="true">
+          <div class="mouse"><div class="wheel"></div></div>
+      </div>
+    </div>
+  </section>
+
+ <!-- ✦ Sticky country tabs -->
+<nav class="product-tabs" aria-label="Countries served">
+  <div class="container product-tabs__inner">
+    <a class="product-tab is-active" href="#ethiopia">Ethiopia</a>
+    <a class="product-tab" href="#kenya">Kenya</a>
+    <a class="product-tab" href="#italy">Italy</a>
+    <a class="product-tab" href="#uae">Iraq</a>
+    <a class="product-tab" href="#sudan">Egypt</a>
+  </div>
+</nav>
+
+
+    <!-- ============================================================= -->
+    <!-- ETHIOPIA SECTION                                              -->
+    <!-- ============================================================= -->
+    <section class="section category" id="ethiopia">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">Ethiopia</h2>
+          <p class="section__lead">
+            From high-altitude springs to sprawling irrigation schemes, VAMA pumps power the nation’s water infrastructure.
+          </p>
+        </header>
+
+        <div class="grid gallery-cards">
+          <!-- Project A -->
+          <article class="gallery-card">
+            <div class="gallery-card__slider" aria-label="Carousel: Addis Ababa Municipal Booster">
+              <button class="carousel__btn carousel__btn--prev" aria-label="Previous slide">
+                <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+              </button>
+
+              <div class="gallery-card__viewport">
+                <img src="assets/gallery/Gibi/20180802_180359.wbmp" alt="Installation of multistage booster set, Addis Ababa" class="slide is-active" />
+                <img src="assets/gallery/Gibi/20180802_180410.wbmp" alt="Pressure vessel & VFD cabinet overview" class="slide" />
+                <img src="assets/gallery/Gibi/20180802_181051.wbmp" alt="Commissioning team running live test" class="slide" />
+              </div>
+
+              <button class="carousel__btn carousel__btn--next" aria-label="Next slide">
+                <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+              </button>
+            </div>
+
+            <div class="gallery-card__content">
+              <h3 class="gallery-card__title">Addis Ababa High-Rise Booster</h3>
+
+              <p class="gallery-card__excerpt">
+                <strong>Professional insight:</strong> Three VMS-65 stainless vertical multistage pumps coupled to 30 kW IE3 motors
+                deliver 12 bar constant pressure to a 32-storey mixed-use tower. The system employs a PLC-controlled duty-assist-standby algorithm to optimise
+                energy consumption and extend service life.
+              </p>
+
+              <p class="gallery-card__excerpt">
+                <strong>End-user benefit:</strong> Residents enjoy uninterrupted water at every tap—even during frequent city-wide pressure drops—while owners cut running costs by 18 % compared to the previous cast-iron units.
+              </p>
+
+              <a href="contact.html" class="btn btn--outline gallery-card__btn">Ask about similar projects</a>
+            </div>
+          </article>
+
+          <!-- Project B -->
+          <article class="gallery-card">
+            <div class="gallery-card__slider" aria-label="Carousel: Awash River Irrigation">
+              <button class="carousel__btn carousel__btn--prev" aria-label="Previous slide">
+                <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+              </button>
+
+              <div class="gallery-card__viewport">
+                <img src="assets/gallery/Harar/WhatsApp Image 2025-07-31 at 5.59.51 PM (1).jpeg" alt="8\" borehole pump being lowered into Awash well" class="slide is-active" />
+                <img src="assets/gallery/Harar/WhatsApp Image 2025-07-31 at 5.59.51 PM.jpeg" alt="Solar array powering pump skid" class="slide" />
+              </div>
+
+              <button class="carousel__btn carousel__btn--next" aria-label="Next slide">
+                <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+              </button>
+            </div>
+
+            <div class="gallery-card__content">
+              <h3 class="gallery-card__title">Awash River Solar Irrigation</h3>
+
+              <p class="gallery-card__excerpt">
+                <strong>Professional insight:</strong> Hybrid 8SD-60 pump with 37 kW Franklin submersible motor and MPPT inverter
+                provides 44 l/s at 78 m head, irrigating 140 ha maize with zero diesel dependency.
+              </p>
+              <p class="gallery-card__excerpt">
+                <strong>Farmer impact:</strong> Crop yield +28 % after first season, water-table drawdown reduced by 12 %, ROI under 2 years.
+              </p>
+
+              <a href="contact.html" class="btn btn--outline gallery-card__btn">Discuss solar pumping</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- KENYA SECTION                                                 -->
+    <!-- ============================================================= -->
+    <section class="section section--alt category category--alt" id="kenya">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">Kenya</h2>
+          <p class="section__lead">
+            Reliably serving community boreholes in arid counties and pressure-boosting hotels along the coast.
+          </p>
+        </header>
+
+        <div class="grid gallery-cards">
+          <!-- Project C -->
+          <article class="gallery-card">
+            <div class="gallery-card__slider" aria-label="Carousel: Turkana Borehole Cluster">
+              <button class="carousel__btn carousel__btn--prev" aria-label="Previous slide">
+                <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+              </button>
+
+              <div class="gallery-card__viewport">
+                <img src="assets/gallery/iraq/WhatsApp Image 2025-07-29 at 5.58.33 PM.jpeg" alt="Field crew installing solar submersible in Turkana" class="slide is-active" />
+                <img src="assets/gallery/iraq/WhatsApp Image 2025-07-29 at 5.59.19 PM (1).jpeg" alt="Community kiosk dispensing water" class="slide" />
+              </div>
+
+              <button class="carousel__btn carousel__btn--next" aria-label="Next slide">
+                <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+              </button>
+            </div>
+
+            <div class="gallery-card__content">
+              <h3 class="gallery-card__title">Turkana Community Wells</h3>
+              <p class="gallery-card__excerpt">
+                24 off-grid 4SD-12 pumps driven by 3.7 kW brushless DC motors provide safe drinking water
+                for 11,800 residents. Telemetry panels report daily flow and dynamic level to NGO HQ in Lodwar.
+              </p>
+              <p class="gallery-card__excerpt">
+                <em>Local testimonial:</em> “Water queues are down from four hours to twenty minutes.” — A. Ekal, village chief.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- ITALY SECTION                                                 -->
+    <!-- ============================================================= -->
+    <section class="section category" id="italy">
+    <div class="container">
+      <header class="section__header">
+        <h2 class="section__title">Italy</h2>
+        <p class="section__lead">
+          Where it all began: rigorous factory testing and pilot projects across Emilia-Romagna.
+        </p>
+      </header>
+
+      <div class="grid gallery-cards">
+        <!-- Project D -->
+        <article class="gallery-card">
+          <div class="gallery-card__slider" aria-label="Carousel: Cavriago Test Loop">
+            <!-- NEW nav buttons -->
+            <button class="carousel__btn carousel__btn--prev" aria-label="Previous slide">
+              <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+            </button>
+
+            <div class="gallery-card__viewport">
+              <img src="assets/gallery/iraq/WhatsApp Image 2025-07-29 at 5.59.19 PM (2).jpeg"
+                   alt="ISO 9906 hydraulic test loop – overview" class="slide is-active">
+              <img src="assets/gallery/iraq/WhatsApp Image 2025-07-29 at 5.59.19 PM (3).jpeg"
+                   alt="Pump performance verification on test bench" class="slide">
+            </div>
+
+            <button class="carousel__btn carousel__btn--next" aria-label="Next slide">
+              <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+            </button>
+          </div>
+
+          <div class="gallery-card__content">
+            <h3 class="gallery-card__title">Factory Proof-Testing Facility</h3>
+            <p class="gallery-card__excerpt">
+              Every pump leaving the Cavriago plant is bench-tested against EN ISO 9906 Grade 1 tolerances.
+              The 60-bar closed loop captures full Q-H curves, vibration spectrum and efficiency index,
+              archived for complete traceability.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+    <!-- ============================================================= -->
+    <!-- UAE SECTION                                                   -->
+    <!-- ============================================================= -->
+    <section class="section section--alt category category--alt" id="uae">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">Iraq</h2>
+          <p class="section__lead">
+            High-efficiency multistage boosters keep desalinated water moving through kilometre-long pipelines in 45 °C heat.
+          </p>
+        </header>
+
+        <div class="grid gallery-cards">
+          <!-- Project E -->
+          <article class="gallery-card">
+            <div class="gallery-card__slider" aria-label="Carousel: Abu Dhabi District Cooling">
+              <button class="carousel__btn carousel__btn--prev" aria-label="Previous slide">
+                <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+              </button>
+
+              <div class="gallery-card__viewport">
+                <img src="assets/gallery/neggele/20180828_163909.jpg" alt="Skid of vertical multistage pumps in district cooling plant" class="slide is-active" />
+                <img src="assets/gallery/neggele/20180828_164602.jpg" alt="Night view of illuminated pipe bridge" class="slide" />
+              </div>
+
+              <button class="carousel__btn carousel__btn--next" aria-label="Next slide">
+                <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+              </button>
+            </div>
+
+            <div class="gallery-card__content">
+              <h3 class="gallery-card__title">Abu Dhabi District Cooling</h3>
+              <p class="gallery-card__excerpt">
+                Six VMT-32 pumps operating in parallel move 480 m³/h chilled water through a 4.2 km loop.
+                Duplex-grade wetted parts extend life expectancy despite aggressive water chemistry.
+              </p>
+              <p class="gallery-card__excerpt">
+                <strong>Energy saving:</strong> VFD-driven ΔP control cuts annual consumption by 740 MWh versus fixed-speed design.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- SUDAN SECTION                                                 -->
+    <!-- ============================================================= -->
+    <section class="section category" id="sudan">
+    <div class="container">
+      <header class="section__header">
+        <h2 class="section__title">Egypt</h2>
+        <p class="section__lead">
+          Emergency relief boreholes commissioned in record time to restore potable water after flooding.
+        </p>
+      </header>
+
+      <div class="grid gallery-cards">
+        <!-- Project F -->
+        <article class="gallery-card">
+          <div class="gallery-card__slider" aria-label="Carousel: Gezira Humanitarian Wells">
+            <!-- NEW nav buttons -->
+            <button class="carousel__btn carousel__btn--prev" aria-label="Previous slide">
+              <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+            </button>
+
+            <div class="gallery-card__viewport">
+              <img src="assets/gallery/neggele/20180828_164605.jpg"
+                   alt="Emergency pumping unit off-loaded at Gezira" class="slide is-active">
+              <img src="assets/gallery/neggele/20180828_164607.jpg"
+                   alt="Containerised skid ready for deployment" class="slide">
+            </div>
+
+            <button class="carousel__btn carousel__btn--next" aria-label="Next slide">
+              <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+            </button>
+          </div>
+
+          <div class="gallery-card__content">
+            <h3 class="gallery-card__title">Gezira Rapid-Response Wells</h3>
+            <p class="gallery-card__excerpt">
+              Ten containerised borehole skids—each with a 6SD-45 pump, generator set and chlorination dosing—produced
+              11 million litres of safe water within 14 days of arrival.
+            </p>
+            <p class="gallery-card__excerpt">
+              <em>NGO feedback:</em> “Deployment was plug-and-play; field team required only a basic wrench set.” — Relief International.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section category" id="certificates" data-animate="zoom-out">
+  <div class="container">
+    <header class="section__header">
+      <h2 class="section__title">Project Testimonials & Certificates</h2>
+      <p class="section__lead">Trusted across sectors and borders — here’s what our clients and partners have to say.</p>
+    </header>
+
+    <div class="testimonial-gallery">
+      <article class="testimonial-card">
+        <div class="testimonial-card__icon" aria-hidden="true">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm1 7H8V4h6v5h1zM8 17h8v-2H8v2zm0-4h8v-2H8v2z"/>
+  </svg>
+</div>
+        <div class="testimonial-card__content">
+          <h3 class="testimonial-card__title">Awash Solar Irrigation</h3>
+          <p>“Flawless integration. Farmers achieved ROI within two years — we’re expanding the system.”</p>
+          <p><em>— Ministry of Agriculture, Ethiopia</em></p>
+          <a href="assets/gallery/testimonials/testomial letter-hrarer.pdf" class="btn btn--outline" target="_blank">View Certificate (PDF)</a>
+        </div>
+      </article>
+
+      <article class="testimonial-card">
+        <div class="testimonial-card__icon" aria-hidden="true">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm1 7H8V4h6v5h1zM8 17h8v-2H8v2zm0-4h8v-2H8v2z"/>
+  </svg>
+</div>
+        <div class="testimonial-card__content">
+          <h3 class="testimonial-card__title">District Cooling System</h3>
+          <p>“Efficiency gains exceeded expectations. VAMA’s systems outlasted alternatives by 40%.”</p>
+          <p><em>— Emirates Utility Commission</em></p>
+          <a href="assets/gallery/testimonials/testomial letter-iraqi.pdf" class="btn btn--outline" target="_blank">View Certificate (PDF)</a>
+        </div>
+      </article>
+
+      <article class="testimonial-card">
+        <div class="testimonial-card__icon" aria-hidden="true">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm1 7H8V4h6v5h1zM8 17h8v-2H8v2zm0-4h8v-2H8v2z"/>
+  </svg>
+</div>
+        <div class="testimonial-card__content">
+          <h3 class="testimonial-card__title">Addis High-Rise Booster</h3>
+          <p>“Pressure is stable even during outages. Residents enjoy 24/7 access across 32 floors.”</p>
+          <p><em>— Project Engineer, Horizon Tower</em></p>
+          <a href="assets/gallery/testimonials/testomial letter-rwaenda.pdf" class="btn btn--outline" target="_blank">View Certificate (PDF)</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+  </main>
+
+ <!-- ✦ CTA banner -->
+<section class="cta">
+  <div class="container cta__inner">
+    <h2 class="cta__title">Have a Project in Mind?</h2>
+    <p class="cta__text">Share your requirements and let our engineers propose the optimal stainless-steel pump solution.</p>
+    <a class="btn btn--dark" href="contact.html">
+      Contact&nbsp;VAMA&nbsp;SRL
+      <svg class="icon icon--arrow" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ✦ Footer -->
+     <footer class="footer" data-animate="fade-up">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <div class="logo logo--lg">
+        <a class="logo" href="index.html" aria-label="VAMA SRL Home">
+          <img src="assets/vama_logo.png" alt="VAMA SRL logo" class="logo__mark" />
+          <span class="logo__text">VAMA SRL</span>
+        </a>
+      </div>
+      <p class="footer__about">Italian-engineered water pumps designed for performance and reliability in Ethiopia.</p>
+
+      <div class="footer__social" aria-label="Social media">
+        <a class="social" href="#" aria-label="LinkedIn">in</a>
+        <a class="social" href="#" aria-label="Facebook">f</a>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <h3 class="footer__title">Italy</h3>
+      <p class="footer__item"><svg class="icon icon--map-pin"><use href="#icon-map-pin"/></svg> Via G. Di Vittorio, 15 – 42025 Cavriago (RE)</p>
+      <p class="footer__item"><svg class="icon icon--phone"><use href="#icon-phone"/></svg> +39 0522 371 159</p>
+      <p class="footer__item"><svg class="icon icon--mail"><use href="#icon-mail"/></svg> info@vamapumps.it</p>
+    </div>
+
+    <div class="footer__col">
+      <h3 class="footer__title">Quick Links</h3>
+      <p class="footer__item"><a href="about.html">know who we are</a></p>
+      <p class="footer__item"><a href="products.html">Submersible Pumps</a></p>
+      <p class="footer__item"><a href="gallery.html">Our Journey</a></p>
+      <p class="footer__item"><a href="contact.html">Request Access to our Pump Selector</a></p>
+      <p class="footer__item"><a href="https://vamapumpselector.com/">Log in to Our Pump Selector</a></p>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <nav class="footer__links" aria-label="Quick links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://vamapumpselector.com/">Pump Selector</a>
+      </nav>
+      <p class="footer__copy">© <span id="year"></span> VAMA SRL. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

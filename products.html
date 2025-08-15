@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ——— Meta ——— -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Products | VAMA SRL — Stainless-Steel Pumps &amp; Systems</title>
+  <meta name="description"
+        content="Discover VAMA SRL’s Italian-made submersible pumps and the carefully-selected booster, surface and control solutions we supply from Europe’s leading manufacturers." />
+
+  <!-- ——— Fonts & Core Styles ——— -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />          <!-- global -->
+  <link rel="stylesheet" href="css/productstyle.css" />  <!-- page-specific -->
+
+  <!-- ——— Shared JS ——— -->
+  <script defer src="js/script.js"></script>             <!-- global -->
+  <script defer src="js/productscript.js"></script>      <!-- tabs / scroll-spy -->
+</head>
+
+<body class="product">
+  <!-- ✦ Inline SVG sprite (icons) -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <!-- Phone -->
+    <symbol id="icon-phone" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" fill="none" stroke="currentColor">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.78 19.78 0 0 1 3.18 5.18
+               2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72 12 12 0 0 0 .56 2.4
+               2 2 0 0 1-.45 2L9 10.91a16 16 0 0 0 6 6l1.79-1.79
+               a2 2 0 0 1 2-.45 12 12 0 0 0 2.4.56A2 2 0 0 1 22 16.92z"/>
+    </symbol>
+    <!-- Mail -->
+    <symbol id="icon-mail" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" fill="none" stroke="currentColor">
+      <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+      <polyline points="3 7 12 13 21 7"></polyline>
+    </symbol>
+    <!-- Arrow Right -->
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" fill="none" stroke="currentColor">
+      <line x1="5" y1="12" x2="19" y2="12"></line>
+      <polyline points="12 5 19 12 12 19"></polyline>
+    </symbol>
+    <!-- Map Pin -->
+    <symbol id="icon-map-pin" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" fill="none" stroke="currentColor">
+      <path d="M21 10c0 6-9 13-9 13S3 16 3 10a9 9 0 1 1 18 0z"></path>
+      <circle cx="12" cy="10" r="3"></circle>
+    </symbol>
+  </svg>
+
+  <!-- ✦ Top Contact Strip -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <span class="topbar__item">
+          <svg class="icon" aria-hidden="true"><use href="#icon-phone"></use></svg>
+          IT&nbsp;+39&nbsp;0522&nbsp;371&nbsp;159
+        </span>
+        <span class="topbar__item">
+          <svg class="icon" aria-hidden="true"><use href="#icon-phone"></use></svg>
+          ET&nbsp;+251&nbsp;911&nbsp;172&nbsp;108
+        </span>
+      </div>
+      <div class="topbar__right">
+        <span class="topbar__item">
+          <svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg>
+          info@vamapumps.it
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✦ Header / Navigation -->
+  <header class="header" id="site-header">
+    <nav class="container nav">
+      <a class="logo" href="index.html" aria-label="VAMA SRL Home">
+        <img src="assets/vama_logo.png" alt="VAMA SRL logo" class="logo__mark" />
+      </a>
+
+      <ul class="nav__links" role="menubar" aria-label="Primary navigation">
+        <li role="none"><a class="nav__link" role="menuitem" href="index.html">Home</a></li>
+        <li role="none"><a class="nav__link" role="menuitem" href="about.html">About&nbsp;Us</a></li>
+        <li role="none"><a class="nav__link is-active" role="menuitem" href="products.html">Products</a></li>
+        <li role="none"><a class="nav__link" role="menuitem" href="gallery.html">Gallery</a></li>
+        <li role="none"><a class="nav__link" role="menuitem" href="contact.html">Contact</a></li>
+        <li role="none"><a class="nav__mobile-link" href="https://vamapumpselector.com/">pump selector</a></li>
+      </ul>
+
+      <a class="btn btn--hero nav__cta" href="contact.html">Get&nbsp;Quote</a>
+
+      <!-- Mobile toggle -->
+      <button class="nav__toggle" id="mobile-menu-toggle" aria-label="Toggle menu"
+              aria-expanded="false" aria-controls="mobile-menu">
+        <span class="nav__toggle-bar"></span><span class="nav__toggle-bar"></span><span class="nav__toggle-bar"></span>
+      </button>
+
+      <!-- Mobile drawer -->
+      <div class="nav__mobile" id="mobile-menu" hidden>
+        <a class="nav__mobile-link" href="index.html">Home</a>
+        <a class="nav__mobile-link" href="about.html">About&nbsp;Us</a>
+        <a class="nav__mobile-link is-active" href="products.html">Products</a>
+        <a class="nav__mobile-link" href="gallery.html">Gallery</a>
+        <a class="nav__mobile-link" href="contact.html">Contact</a>
+        <a class="nav__mobile-link" href="https://vamapumpselector.com/">pump selector</a>
+        <a class="btn btn--hero nav__mobile-cta" href="contact.html">Get&nbsp;Quote</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ✦ Hero -->
+    <section class="hero" aria-label="Product overview hero">
+      <div class="hero__bg" style="--hero-image:url('assets/products-hero.jpg')"></div>
+      <div class="container hero__inner">
+        <h1 class="hero__title">Integrated Pump&nbsp;Solutions</h1>
+        <p class="hero__subtitle">From deep-well extraction to high-rise boosting, VAMA delivers complete stainless-steel systems tailored to Ethiopia’s toughest water challenges.</p>
+        <div class="hero__scroll" aria-hidden="true">
+          <div class="mouse"><div class="wheel"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✦ Sticky Category Tabs -->
+    <nav class="product-tabs" aria-label="Pump categories">
+      <div class="container product-tabs__inner">
+        <a class="product-tab is-active" href="#submersible">Submersible</a>
+        <a class="product-tab" href="#multistage">Multistage</a>
+        <a class="product-tab" href="#surface">Surface Centrifugal</a>
+        <a class="product-tab" href="#controls">Controls &amp; Accessories</a>
+      </div>
+    </nav>
+
+    <!-- ═════════ 1 ▸ SUBMERSIBLE (manufactured) ═════════ -->
+    <section class="section category" id="submersible" data-animate="zoom-in">
+      <div class="container category__inner">
+        <div class="category__content">
+          <p class="badge badge--own">Manufactured&nbsp;by&nbsp;VAMA&nbsp;SRL</p>
+
+          <h2 class="section__title">Submersible Borehole Pumps</h2>
+          <p class="section__lead">
+            Built on three decades of stainless-steel know-how, our submersible
+            line delivers clean, reliable water from the chalky limestone of Dire Dawa
+            to the basalt aquifers of Tigray.
+          </p>
+          <p>
+            Every impeller, diffuser and sleeve is laser-welded in Reggio Emilia,
+            then test-run at 50 / 60 Hz so you can power the pump from diesel
+            gensets, solar drives or the national grid without redesign.
+            Lower energy bills, fewer breakdowns — more water, every day.
+          </p>
+
+          <ul class="category__list">
+            <li>4″ series — small community &amp; domestic wells</li>
+            <li>6″ series — agriculture &amp; town water-works</li>
+            <li>8″ series — high-capacity municipal supply</li>
+            <li>10″ / 12″ series — large-scale irrigation &amp; industry</li>
+          </ul>
+
+                    <p class="category__note">
+            Need full curves or motor data?
+            <a class="link" href="contact.html">Request Pump-Selector access</a>.
+          </p>
+        </div>  <!-- /.category__content -->
+
+<div class="category__image">
+  <div class="image-and-brochure">
+    <img src="assets/products/submersablep_pumps.jpg"
+         alt="Array of VAMA stainless-steel submersible pumps"
+         class="ib__img" />
+
+    <!-- ── Submersible brochure (cover + download options) ── -->
+    <div class="brochure ib__brochure">
+      <img src="assets/brochures/vama submersable pump catalogue.png"
+           alt="Submersible Pumps brochure cover"
+           class="brochure__cover">
+
+      <details class="brochure__downloads">
+        <summary class="btn btn--outline brochure__btn">
+          Download&nbsp;PDF
+        </summary>
+        <ul class="brochure__list">
+          <li>
+            <a href="assets/brochures/vama submersable pump catalogue high.pdf" download>
+              High quality <span>(239&nbsp;MB)</span>
+            </a>
+          </li>
+          <li>
+            <a href="assets/brochures/vama submersable pump catalogue low.pdf" download>
+              Low quality <span>(20.9&nbsp;MB)</span>
+            </a>
+          </li>
+        </ul>
+      </details>
+    </div>
+  </div>
+</div>
+
+
+      </div>
+    </section>
+
+    <!-- ═════════ 2 ▸ VERTICAL MULTISTAGE (supplied) ═════ -->
+    <section class="section section--alt category category--alt" id="multistage" data-animate="fade-left">
+      <div class="container category__inner">
+        <div class="category__image">
+          <img src="assets/products/vertical-multistage.jpg"
+               alt="Compact vertical multistage booster pump" />
+        </div>
+
+        <div class="category__content">
+          <p class="badge badge--supplier">Supplied by VAMA&nbsp;SRL</p>
+
+          <h2 class="section__title">Vertical Multistage Boosters</h2>
+          <p class="section__lead">
+            When footprint is scarce, our inline boosters tuck neatly between
+            pipes, generating skyscraper pressure with the sipping-fuel appetite
+            of a domestic appliance.
+          </p>
+          <p>
+            All wet parts are AISI 304/316; double mechanical seals keep your
+            RO membranes pristine, while cartridge bearings allow a full seal
+            swap in under 20 minutes&nbsp;— no crane required.
+          </p>
+          <p>
+            Flow&nbsp;up to 120&nbsp;m<sup>3</sup>/h &nbsp;|&nbsp; Head up to 450&nbsp;m
+            <br>IEC and NEMA motor options.
+          </p>
+
+          <!-- Supplier logos -->
+          <div class="suppliers">
+            <h3 class="suppliers__title">Our suppliers</h3>
+            <ul class="suppliers__list">
+              <li><img src="assets/partners/rovatti_pompe.jpg" alt="Rovatti logo"   class="supplier-logo"></li>
+              <li><img src="assets/partners/caprari.png"       alt="Caprari logo"   class="supplier-logo"></li>
+              <li><img src="assets/partners/franklin.png"      alt="Franklin logo"  class="supplier-logo"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="section category" id="scada" data-animate="fade-up">
+  <div class="container category__inner">
+    <div class="category__image">
+      <img src="assets/products/scada monitor.jpg"
+           alt="SCADA system monitoring interface"
+           class="category__image-img" />
+    </div>
+    <div class="category__content">
+      <p class="badge badge--supplier">Advanced Control</p>
+      <h2 class="section__title">SCADA Integration</h2>
+      <p class="section__lead">
+        VAMA supports full SCADA integration for remote pump monitoring, automation, and smart alerts.
+      </p>
+      <p>
+        Whether you're managing a single well or a regional distribution network, SCADA lets you:
+      </p>
+      <ul class="category__list">
+        <li>Monitor flow, pressure, and energy use in real-time</li>
+        <li>Set alerts for faults, downtime, or abnormal behavior</li>
+        <li>Adjust parameters remotely to optimize performance</li>
+        <li>Analyze data trends for predictive maintenance</li>
+      </ul>
+      <p class="category__note">
+        Ready to modernize your water operations?
+        <a class="link" href="contact.html">Talk to our engineers</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+    <!-- ═════════ 3 ▸ SURFACE CENTRIFUGAL (supplied) ═════ -->
+    <section class="section category" id="surface" data-animate="fade-right">
+      <div class="container category__inner">
+        <div class="category__content">
+          <p class="badge badge--supplier">Supplied by VAMA&nbsp;SRL</p>
+
+          <h2 class="section__title">Surface Centrifugal Pumps</h2>
+          <p class="section__lead">
+            These cast-iron workhorses move rivers. Whether you’re filling a
+            5 000 m³ reservoir before dawn or recirculating cooling water
+            through a textile line, the over-engineered shafts and bronze wear-rings
+            take Ethiopia’s volcanic silt in stride.
+          </p>
+          <p>
+            • End-suction up to 250 m<sup>3</sup>/h / 110 m head<br>
+            • Split-case&nbsp;up to 700 m<sup>3</sup>/h / 90 m head
+          </p>
+
+          <div class="suppliers">
+            <h3 class="suppliers__title">Our suppliers</h3>
+            <ul class="suppliers__list">
+              <li><img src="assets/partners/caprari.png"  alt="Caprari logo"  class="supplier-logo"></li>
+              <li><img src="assets/partners/franklin.png" alt="Franklin logo" class="supplier-logo"></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="category__image">
+          <img src="assets/products/centrifugal pumps.jpg"
+               alt="Large split-case centrifugal pump on test bench" />
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═════════ 4 ▸ CONTROLS & ACCESSORIES (supplied) ═══ -->
+    
+<section class="section section--alt category category--alt" id="controls" data-animate="zoom-out">
+      <div class="container category__inner">
+        <div class="category__image">
+          <img src="assets/products/electric-control-panel-board.webp"
+               alt="Variable-frequency drive and stainless control panel" />
+        </div>
+
+        <div class="category__content">
+          <p class="badge badge--supplier">Supplied by VAMA&nbsp;SRL</p>
+
+          <h2 class="section__title">Controls &amp; Accessories</h2>
+          <p class="section__lead">
+            A pump is only as smart as the panel that drives it. Our Danfoss and
+            Siemens VFDs auto-optimise power factor, soft-start motors in&nbsp;<3 s
+            and text you before a fault becomes a failure.</p>
+          <p>
+            Need telemetry? Drop in a GSM module and view live flow, head and
+            kWh on any phone&nbsp;— even over 2 G links. Downtime isn’t an
+            option when the crop cycle can’t wait.
+          </p>
+
+          <ul class="category__list">
+            <li>VFDs 0.75 – 90 kW with pump-optimised PID</li>
+            <li>Star-delta &amp; soft-starter control panels</li>
+            <li>Level, pressure &amp; flow instrumentation</li>
+            <li>Mechanical-seal &amp; bearing service kits</li>
+          </ul>
+
+          <div class="suppliers">
+            <h3 class="suppliers__title">Our suppliers</h3>
+            <ul class="suppliers__list">
+              <li><img src="assets/partners/rovatti_pompe.jpg" alt="Rovatti logo"  class="supplier-logo"></li>
+              <li><img src="assets/partners/caprari.png"       alt="Caprari logo"  class="supplier-logo"></li>
+              <li><img src="assets/partners/franklin.png"      alt="Franklin logo" class="supplier-logo"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════ 5 ▸ SERVICE & SUPPORT (white background) ═ -->
+    <section class="section" id="service" data-animate="fade-down">
+      <div class="container grid grid--2">
+        <article>
+          <h2 class="section__title">Service &amp; Support</h2>
+          <p class="section__lead">
+            Installation supervision, start-up commissioning and 24-hour
+            spare-parts fulfilment from our Addis Ababa hub keep your pumps
+            running — day after day.
+          </p>
+          <ul class="category__list">
+            <li>On-site commissioning across Ethiopia</li>
+            <li>Genuine spare parts stocked locally</li>
+            <li>Certified pump-test bench for warranty evaluation</li>
+            <li>Operator training &amp; maintenance contracts</li>
+          </ul>
+        </article>
+
+        <article>
+          <h2 class="section__title">Quality &amp; Certification</h2>
+          <p class="section__lead">
+            VAMA’s production facility in Reggio Emilia is ISO 9001 and
+            ISO 14001 certified and equipped with a 60-bar hydraulic test loop
+            compliant with EN ISO 9906 Grade 1.
+          </p>
+          <p class="category__note">Certificates available on request.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ✦ CTA -->
+    <section class="cta" data-animate="zoom-in">
+      <div class="container cta__inner">
+        <h2 class="cta__title">Let’s Engineer Your Next Water Solution</h2>
+        <p class="cta__text">Talk to our engineers for sizing assistance or request secure Pump-Selector access.</p>
+        <a class="btn btn--dark" href="contact.html">
+          Contact&nbsp;VAMA&nbsp;SRL
+          <svg class="icon icon--arrow" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ✦ Footer -->
+       <footer class="footer" data-animate="fade-up">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <div class="logo logo--lg">
+        <a class="logo" href="index.html" aria-label="VAMA SRL Home">
+          <img src="assets/vama_logo.png" alt="VAMA SRL logo" class="logo__mark" />
+          <span class="logo__text">VAMA SRL</span>
+        </a>
+      </div>
+      <p class="footer__about">Italian-engineered water pumps designed for performance and reliability in Ethiopia.</p>
+
+      <div class="footer__social" aria-label="Social media">
+        <a class="social" href="#" aria-label="LinkedIn">in</a>
+        <a class="social" href="#" aria-label="Facebook">f</a>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <h3 class="footer__title">Italy</h3>
+      <p class="footer__item"><svg class="icon icon--map-pin"><use href="#icon-map-pin"/></svg> Via G. Di Vittorio, 15 – 42025 Cavriago (RE)</p>
+      <p class="footer__item"><svg class="icon icon--phone"><use href="#icon-phone"/></svg> +39 0522 371 159</p>
+      <p class="footer__item"><svg class="icon icon--mail"><use href="#icon-mail"/></svg> info@vamapumps.it</p>
+    </div>
+
+    <div class="footer__col">
+      <h3 class="footer__title">Quick Links</h3>
+      <p class="footer__item"><a href="about.html">know who we are</a></p>
+      <p class="footer__item"><a href="products.html">Submersible Pumps</a></p>
+      <p class="footer__item"><a href="gallery.html">Our Journey</a></p>
+      <p class="footer__item"><a href="contact.html">Request Access to our Pump Selector</a></p>
+      <p class="footer__item"><a href="https://vamapumpselector.com/">Log in to Our Pump Selector</a></p>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <nav class="footer__links" aria-label="Quick links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://vamapumpselector.com/">Pump Selector</a>
+      </nav>
+      <p class="footer__copy">© <span id="year"></span> VAMA SRL. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

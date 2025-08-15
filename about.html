@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us | VAMA SRL — Engineering Water. Sustaining Life.</title>
+  <meta name="description" content="Discover how VAMA SRL combines 100 % Italian stainless‑steel engineering with Ethiopian insight to deliver world‑class pumping systems." />
+
+  <!-- Fonts + Global CSS -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/aboutstyle.css" />
+
+  <!-- Page + shared JS -->
+  <script defer src="js/script.js"></script>
+  <script defer src="js/aboutscript.js"></script>
+</head>
+
+<body class="about">
+  <!-- SVG Icon Sprite (shared with homepage) -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <!-- Phone -->
+    <symbol id="icon-phone" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="currentColor">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.78 19.78 0 0 1 3.18 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72 12 12 0 0 0 .56 2.4 2 2 0 0 1-.45 2L9 10.91a16 16 0 0 0 6 6l1.79-1.79a2 2 0 0 1 2-.45 12 12 0 0 0 2.4.56A2 2 0 0 1 22 16.92z"/>
+    </symbol>
+    <!-- Mail -->
+    <symbol id="icon-mail" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="currentColor">
+      <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+      <polyline points="3 7 12 13 21 7"></polyline>
+    </symbol>
+    <!-- Arrow Right -->
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="currentColor">
+      <line x1="5" y1="12" x2="19" y2="12"></line>
+      <polyline points="12 5 19 12 12 19"></polyline>
+    </symbol>
+    <!-- Arrow Left -->
+    <symbol id="icon-arrow-left" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="currentColor">
+      <line x1="19" y1="12" x2="5" y2="12"></line>
+      <polyline points="12 19 5 12 12 5"></polyline>
+    </symbol>
+    <!-- Award / Medal -->
+    <symbol id="icon-award" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="currentColor">
+      <circle cx="12" cy="8" r="6"></circle>
+      <path d="M15.477 12.89L18 22l-6-3-6 3 2.523-9.11"></path>
+    </symbol>
+    <!-- Bolt / Lightning -->
+    <symbol id="icon-bolt" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="currentColor">
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+    </symbol>
+    <!-- Tool / Wrench -->
+    <symbol id="icon-tool" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="currentColor">
+      <path d="M14.7 6.3a7 7 0 0 0-9.9 9.9l9.9-9.9z"></path>
+      <path d="M11.8 13.8l-1.6 1.6"></path>
+    </symbol>
+    <!-- Star -->
+    <symbol id="icon-star" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="currentColor" stroke="currentColor">
+      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+    </symbol>
+    <!-- Map Pin -->
+    <symbol id="icon-map-pin" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="currentColor">
+      <path d="M21 10c0 6-9 13-9 13S3 16 3 10a9 9 0 1 1 18 0z"></path>
+      <circle cx="12" cy="10" r="3"></circle>
+    </symbol>
+  </svg>
+
+  <!-- ✦ Contact strip -->
+  <div class="topbar" data-animate>
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <span class="topbar__item">
+          <svg aria-hidden="true" class="icon icon--phone"><use href="#icon-phone"></use></svg>
+          IT +39 0522 371 159
+        </span>
+        <span class="topbar__item">
+          <svg aria-hidden="true" class="icon icon--phone"><use href="#icon-phone"></use></svg>
+          ET +251 911 172 108
+        </span>
+      </div>
+      <div class="topbar__right">
+        <span class="topbar__item">
+          <svg aria-hidden="true" class="icon icon--mail"><use href="#icon-mail"></use></svg>
+          info@vamapumps.it
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✦ Header / Nav -->
+  <header class="header" id="site-header" data-animate="fade-down">
+    <nav class="container nav">
+      <a class="logo" href="index.html" aria-label="Home">
+        <img src="assets/vama_logo.png" alt="VAMA SRL logo" class="logo__mark" />
+      </a>
+
+      <ul class="nav__links" role="menubar" aria-label="Primary">
+        <li role="none"><a class="nav__link" role="menuitem" href="index.html">Home</a></li>
+        <li role="none"><a class="nav__link is-active" role="menuitem" href="about.html">About Us</a></li>
+        <li role="none"><a class="nav__link" role="menuitem" href="products.html">Products</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="gallery.html">Gallery</a></li>
+        <li role="none"><a class="nav__link" role="menuitem" href="contact.html">Contact</a></li>
+        <li role="none"><a class="nav__mobile-link" href="https://vamapumpselector.com/">pump selector</a></li>
+      </ul>
+
+      <a class="btn btn--hero nav__cta" href="contact.html">Get Quote</a>
+
+      <!-- Mobile burger -->
+      <button class="nav__toggle" id="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="nav__toggle-bar"></span><span class="nav__toggle-bar"></span><span class="nav__toggle-bar"></span>
+      </button>
+
+      <!-- Mobile drawer -->
+      <div class="nav__mobile" id="mobile-menu" hidden>
+        <a class="nav__mobile-link" href="index.html">Home</a>
+        <a class="nav__mobile-link is-active" href="about.html">About Us</a>
+        <a class="nav__mobile-link" href="products.html">Products</a>
+        <a class="nav__mobile-link" href="gallery.html">Gallery</a>
+        <a class="nav__mobile-link" href="contact.html">Contact</a>
+        <a class="nav__mobile-link" href="https://vamapumpselector.com/">pump selector</a>
+        <a class="btn btn--hero nav__mobile-cta" href="contact.html">Get Quote</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ✦ Hero banner -->
+   <section class="hero" aria-label="About VAMA SRL" data-animate="zoom-in">
+      <div class="hero__bg" style="--hero-image:url('assets/about-hero.jpg');"></div>
+      <div class="container hero__inner">
+        <h1 class="hero__title">About VAMA SRL</h1>
+        <p class="hero__subtitle">Italian expertise. Ethiopian impact.<br />Engineering Water—Sustaining Life.</p>
+        <div class="hero__scroll" aria-hidden="true">
+          <div class="mouse"><div class="wheel"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✦ Why VAMA (value cards) -->
+    <section class="section" data-animate="fade-right">
+      <div class="container grid grid--3 cards">
+        <article class="card" data-animate>
+          <h3 class="card__title">100 % Stainless Steel</h3>
+          <p class="card__text">All submersible and vertical multistage pumps are built entirely from AISI 304/316 stainless steel for corrosion‑proof longevity.</p>
+        </article>
+        <article class="card" data-animate>
+          <h3 class="card__title">Made in Italy</h3>
+          <p class="card__text">End‑to‑end design and production in Reggio Emilia ensure uncompromised quality and traceability.</p>
+        </article>
+        <article class="card" data-animate>
+          <h3 class="card__title">ISO 9001 Certified</h3>
+          <p class="card__text">Our quality‑management system meets ISO 9001:2015 standards, guaranteeing repeatable excellence.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ✦ Mission & Vision -->
+    <section class="section section--alt" data-animate="fade-up">
+      <div class="container grid grid--2">
+        <article>
+          <h2 class="section__title">Our Mission</h2>
+          <p class="section__lead">Deliver energy‑efficient stainless‑steel pumping solutions that secure clean water for Ethiopian communities, agriculture and industry.</p>
+        </article>
+        <article>
+          <h2 class="section__title">Our Vision</h2>
+          <p class="section__lead">A future where every household and enterprise enjoys sustainable water access—powered by Italian engineering and local know‑how.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ✦ Company metrics -->
+    <section class="section" id="about-counters" data-animate="zoom-in">
+      <div class="container kpis">
+        <div class="kpi"><div class="kpi__value" data-count="1968">0</div><div class="kpi__label">Year founded</div></div>
+        <div class="kpi"><div class="kpi__value" data-count="27">0</div><div class="kpi__label">Countries served</div></div>
+        <div class="kpi"><div class="kpi__value" data-count="100">0</div><div class="kpi__label">Employees&nbsp;in&nbsp;Italy</div></div>
+        <div class="kpi"><div class="kpi__value" data-count="15857">0</div><div class="kpi__label">Submersable pumps sold</div></div>
+      </div>
+    </section>
+
+<!-- ✦ Timeline -->
+<section class="section section--alt" id="timeline" data-animate="fade-left">
+  <div class="container">
+    <header class="section__header">
+      <h2 class="section__title">Key milestones</h2>
+      <p class="section__lead">Scroll inside the panel to explore our journey.</p>
+    </header>
+
+    <div class="timeline timeline--scroll" tabindex="0">
+      <!-- 1968 -->
+      <div class="timeline__item">
+        <div class="timeline__year">1968</div>
+        <div class="timeline__content">
+          <h3 class="timeline__title">Founded in Reggio&nbsp;Emilia</h3>
+          <p>The Company was founded in 1968, and at that time the first products were mainly submersible motors and spare parts for submersible pumps.</p>
+        </div>
+      </div>
+
+      <!-- 1974 -->
+      <div class="timeline__item">
+        <div class="timeline__year">1974</div>
+        <div class="timeline__content">
+          <h3 class="timeline__title">Launch of cast-iron submersible line</h3>
+          <p>The real breakthrough began by introducing to the market the first line of submersible pumps made of cast iron and submersible motors with powers up to 100&nbsp;hp.</p>
+        </div>
+      </div>
+
+      <!-- 1982 -->
+      <div class="timeline__item">
+        <div class="timeline__year">1982</div>
+        <div class="timeline__content">
+          <h3 class="timeline__title">Range expanded to 12″ / 300 hp</h3>
+          <p>Continued with the expansion of the range to 12" pumps with powers up to 300&nbsp;hp.</p>
+        </div>
+      </div>
+
+      <!-- 1988 -->
+      <div class="timeline__item">
+        <div class="timeline__year">1988</div>
+        <div class="timeline__content">
+          <h3 class="timeline__title">Global expansion across EMEA</h3>
+          <p>Thanks to the acquisition of important professionals such as qualified engineers and foreign marketing managers, VAMA's market and field of activity expanded in European countries, Middle East, and established its steady presence also in Maghreb, North and Central Africa.</p>
+        </div>
+      </div>
+
+      <!-- 1994 -->
+      <div class="timeline__item">
+        <div class="timeline__year">1994</div>
+        <div class="timeline__content">
+          <h3 class="timeline__title">Switch to stainless-steel design</h3>
+          <p>Sensing the opportunity offered by new technologies, the Ownership decided to start the production of stainless steel submersible pumps starting a new design phase from zero.</p>
+        </div>
+      </div>
+
+      <!-- 1995 -->
+      <div class="timeline__item">
+        <div class="timeline__year">1995</div>
+        <div class="timeline__content">
+          <h3 class="timeline__title">First 4″ & 6″ steel pumps released</h3>
+          <p>Began the production of the first series of 4" &amp; 6" stainless steel pumps, immediately enjoying unexpected success.</p>
+        </div>
+      </div>
+
+      <!-- 2011 -->
+      <div class="timeline__item">
+        <div class="timeline__year">2011</div>
+        <div class="timeline__content">
+          <h3 class="timeline__title">Turn-key stations &amp; surface pumps</h3>
+          <p>Underwent further development by initiating a study of design and construction of complete pumping stations and horizontal mono and multistage pumps.</p>
+        </div>
+      </div>
+
+      <!-- Recent Developments -->
+      <div class="timeline__item">
+        <div class="timeline__year">Recent Developments</div>
+        <div class="timeline__content">
+          <h3 class="timeline__title">Radial / semi-axial series &amp; SCADA</h3>
+          <p>Developed a new series of radial and semi-axial pumps (8", 10", &amp; 12") with powers up to 250&nbsp;kW.<br>Introduced new product lines such as Ram Antibody Assemblies, various types of piping and valves, and SCADA management software for full automation of pumping stations.</p>
+        </div>
+      </div>
+    </div><!-- /.timeline -->
+  </div>
+</section>
+
+
+    <!-- ✦ Leadership -->
+    <section class="section" data-animate="fade-up">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">Meet the Leadership</h2>
+          <p class="section__lead">People driving innovation and partnership every day.</p>
+        </header>
+
+        <div class="grid grid--3 cards">
+          <figure class="card">
+            <img src="assets/team/person 1.jpg" alt="Marco Bianchi — Managing Director" class="card__img" />
+            <figcaption><h3 class="card__title">Marco Bianchi</h3><p class="card__text">Managing Director</p></figcaption>
+          </figure>
+
+          <figure class="card">
+            <img src="assets/team/person 2.jpg" alt="Sara Abebe — Country Manager Ethiopia" class="card__img" />
+            <figcaption><h3 class="card__title">Sara Abebe</h3><p class="card__text">Country Manager, Ethiopia</p></figcaption>
+          </figure>
+
+          <figure class="card">
+            <img src="assets/team/person 3.jpg" alt="Giulia Rossi — Technical Director" class="card__img" />
+            <figcaption><h3 class="card__title">Giulia Rossi</h3><p class="card__text">Technical Director</p></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✦ Partners -->
+    <section class="section section--alt" data-animate="fade-up">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">Trusted partners</h2>
+          <p class="section__lead">Collaborating with global technology leaders and local NGOs.</p>
+        </header>
+
+        <div class="partners">
+          <img src="assets/partners/anernlogo.png" alt="ANERN" class="partners__logo" />
+          <img src="assets/partners/brlogo.png" alt="Borehole Relief" class="partners__logo" />
+          <img src="assets/partners/franklin.png" alt="Franklin Electric" class="partners__logo" />
+          <img src="assets/partners/caprari.png" alt="Caprari" class="partners__logo" />
+        </div>
+      </div>
+    </section>
+    
+        <!-- ✦ How we build a pump (FAQ) -->
+<section id="build-faq" class="section" data-animate="fade-right">
+  <div class="container">
+    <header class="section__header">
+      <h2 class="section__title">How we build a pump</h2>
+      <p  class="section__lead">Answers to your most-asked production questions.</p>
+    </header>
+
+    <details class="accordion" data-animate open>
+      <summary class="accordion__head">Which stainless-steel grades do you use?</summary>
+      <p class="accordion__body">Standard parts are AISI 304; aggressive fluids get AISI 316L, Duplex or Super-Duplex on request.</p>
+    </details>
+
+    <details class="accordion">
+      <summary class="accordion__head">Is every pump tested before shipment?</summary>
+      <p class="accordion__body">Yes—each unit runs on our ISO 9906 Grade-2B test loop and ships with its own performance curve.</p>
+    </details>
+
+    <details class="accordion">
+      <summary class="accordion__head">Can you customise flanges or couplings?</summary>
+      <p class="accordion__body">Laser-cutting and CNC machining let us swap NEMA/IEC standards or add OEM branding within 48 h.</p>
+    </details>
+  </div>
+</section>
+
+    <!-- ✦ CTA banner -->
+    <section class="cta" data-animate="zoom-out">
+      <div class="container cta__inner">
+        <h2 class="cta__title">Let’s Build Ethiopia’s Water Future—Together</h2>
+        <p class="cta__text">Talk to our engineers about your next project.</p>
+        <a class="btn btn--dark" href="contact.html">
+          Start the Conversation&nbsp;
+          <svg aria-hidden="true" class="icon icon--arrow"><use href="#icon-arrow-right"></use></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ✦ Footer -->
+     <footer class="footer" data-animate="fade-up">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <div class="logo logo--lg">
+        <a class="logo" href="index.html" aria-label="VAMA SRL Home">
+          <img src="assets/vama_logo.png" alt="VAMA SRL logo" class="logo__mark" />
+          <span class="logo__text">VAMA SRL</span>
+        </a>
+      </div>
+      <p class="footer__about">Italian-engineered water pumps designed for performance and reliability in Ethiopia.</p>
+
+      <div class="footer__social" aria-label="Social media">
+        <a class="social" href="#" aria-label="LinkedIn">in</a>
+        <a class="social" href="#" aria-label="Facebook">f</a>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <h3 class="footer__title">Italy</h3>
+      <p class="footer__item"><svg class="icon icon--map-pin"><use href="#icon-map-pin"/></svg> Via G. Di Vittorio, 15 – 42025 Cavriago (RE)</p>
+      <p class="footer__item"><svg class="icon icon--phone"><use href="#icon-phone"/></svg> +39 0522 371 159</p>
+      <p class="footer__item"><svg class="icon icon--mail"><use href="#icon-mail"/></svg> info@vamapumps.it</p>
+    </div>
+
+    <div class="footer__col">
+      <h3 class="footer__title">Quick Links</h3>
+      <p class="footer__item"><a href="about.html">know who we are</a></p>
+      <p class="footer__item"><a href="products.html">Submersible Pumps</a></p>
+      <p class="footer__item"><a href="gallery.html">Our Journey</a></p>
+      <p class="footer__item"><a href="contact.html">Request Access to our Pump Selector</a></p>
+      <p class="footer__item"><a href="https://vamapumpselector.com/">Log in to Our Pump Selector</a></p>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <nav class="footer__links" aria-label="Quick links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://vamapumpselector.com/">Pump Selector</a>
+      </nav>
+      <p class="footer__copy">© <span id="year"></span> VAMA SRL. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+</html>
